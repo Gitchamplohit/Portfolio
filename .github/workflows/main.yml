@@ -1,0 +1,16 @@
+name: Portfolio Deployment
+
+on:
+  push:
+    branches:
+    - master
+jobs:
+  my_job:
+    name: deploy to staging
+    runs-on: ubuntu-22.04   
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
+
+    - name: azure credentials config
+      uses: 
