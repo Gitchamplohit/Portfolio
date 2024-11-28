@@ -13,6 +13,8 @@ jobs:
 
     - name: Set up Azure CLI
       uses: azure/setup-azurecli@v1
+      with:
+          azure_cli_version: '2.38.0'
      
 
     - name: Upload to Azure Blob Storage
