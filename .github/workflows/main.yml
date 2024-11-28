@@ -6,7 +6,7 @@ on:
     - master
 jobs:
   my_job:
-    name: deploy to staging
+    name: build and  deploy
     runs-on: ubuntu-22.04   
     steps:
     - name: checkout
@@ -25,6 +25,6 @@ jobs:
        az storage blob upload-batch \
             --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
             --destination '$web' \
-            --source index.html 
+            --source Public/* 
 
 
