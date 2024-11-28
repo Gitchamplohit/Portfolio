@@ -6,14 +6,14 @@ on:
     - master
 jobs:
   my_job:
-    name: build and  deploy
+    build and  deploy:
     runs-on: ubuntu-22.04   
     steps:
     - name: checkout
       uses: actions/checkout@v1
 
     - name: Set up Azure CLI
-        uses: azure/setup-azurecli@v1
+      uses: azure/setup-azurecli@v1
      
 
     - name: Upload to Azure Blob Storage
@@ -23,6 +23,6 @@ jobs:
         az storage blob download-batch \
             --account-name $AZURE_STORAGE_ACCOUNT \
             --account-key $AZURE_STORAGE_ACCOUNT_KEY \
-            --destination ./site \
-            --source '$web'
+            --destination '$web' \
+            --source ./
 
