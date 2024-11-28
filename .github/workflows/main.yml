@@ -5,8 +5,7 @@ on:
     branches:
     - master
 jobs:
-  my_job:
-    build and  deploy:
+  build-an-deploy:
     runs-on: ubuntu-22.04   
     steps:
     - name: checkout
