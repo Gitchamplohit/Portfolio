@@ -12,9 +12,6 @@ jobs:
     - name: checkout
       uses: actions/checkout@v1
 
-    - name: azure cli setup
-      uses: azure/setup-azurecli@v1
-
     - name: azure login
       uses: azure/login@v1
       with: 
